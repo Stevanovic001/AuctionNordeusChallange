@@ -33,12 +33,4 @@ public class HttpController {
         auctionService.bid(auctionId, userId);
     }
 
-    @GetMapping("/test")
-    public void test(){
-        Auction auction = getAllActive().iterator().next();
-        User user = new User("Miladniko");
-        joinAuc(auction.getAuctionId(), user);
-        bidAuc(auction.getAuctionId(), user.getUserId());
-    }
-
 }
